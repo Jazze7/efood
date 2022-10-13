@@ -1,8 +1,34 @@
 import React from "react";
 import styled from "styled-components";
 import "../../App.css";
+import products from "../json/Product.json";
 
 export default function Spotlight() {
+  //function to render the products
+  let renderProduct = () => {
+    return products.map((product) => {
+      return (
+        <Productlist key={product.id}>
+          <PicContainer>
+            <Photo
+              src={require(`../../Assets/images/${product.image}`)}
+            ></Photo>
+          </PicContainer>
+          <Title>{product.title}</Title>
+          <Detail>
+            <PriceContainer>
+              <DiscountPrice>
+                <Dollar>$</Dollar>
+                {product.Discount_Price}
+              </DiscountPrice>
+              <ActualPrice>{product.Actual_Price}</ActualPrice>
+            </PriceContainer>
+            <OrderButton>Order</OrderButton>
+          </Detail>
+        </Productlist>
+      );
+    });
+  };
   return (
     <>
       <MainContainer>
@@ -107,6 +133,8 @@ export default function Spotlight() {
               <Menu>Coffee</Menu>
             </Nav>
           </NavBar>
+
+          <Content>{renderProduct()}</Content>
         </MiddleContainer>
       </MainContainer>
     </>
@@ -117,7 +145,7 @@ const MainContainer = styled.section`
   padding: 20px 0;
   display: flex;
 `;
-const LeftContainer = styled.div`
+const LeftContainer = styled.aside`
   width: 10%;
 `;
 const ContentContainer = styled.div`
@@ -147,8 +175,8 @@ const WidgetImageContainer = styled.li`
   &::after {
     content: "";
     position: absolute;
-    top: -7px;
-    left: -7px;
+    top: -9px;
+    left: -8px;
     display: block;
     width: 35px;
     height: 35px;
@@ -186,7 +214,7 @@ const Header = styled.div`
   margin-bottom: 30px;
 `;
 const HeadLeft = styled.div`
-  width: 30%;
+  width: 35%;
 `;
 const Heading = styled.h2`
   font-size: 24px;
@@ -204,12 +232,14 @@ const HeadRight = styled.div`
   justify-content: space-evenly;
 `;
 const Buttons = styled.div`
-  width: 52%;
+  width: 50%;
   display: flex;
   justify-content: space-between;
 `;
 const MenuButton = styled.button`
-  padding: 15px 25px;
+  height: 35px;
+  width: 60px;
+  font-size: 12px;
   background-color: #eeeeee;
   border-radius: 50px;
   color: #7c7c7c;
@@ -221,7 +251,9 @@ const MenuButton = styled.button`
   }
 `;
 const MealButton = styled.button`
-  padding: 15px 25px;
+  height: 35px;
+  width: 90px;
+  font-size: 12px;
   background-color: #eeeeee;
   border-radius: 50px;
   color: #7c7c7c;
@@ -233,7 +265,9 @@ const MealButton = styled.button`
   }
 `;
 const DeliveryButton = styled.button`
-  padding: 15px 25px;
+  height: 35px;
+  width: 75px;
+  font-size: 12px;
   background-color: #eeeeee;
   border-radius: 50px;
   color: #7c7c7c;
@@ -249,18 +283,20 @@ const FormSearch = styled.form`
   position: relative;
 `;
 const FormInput = styled.input`
-  padding: 15px 15px;
+  padding: 10px 15px;
   background-color: #eeeeee;
   border-radius: 50px;
   color: #7c7c7c;
   font-weight: 500;
   font-family: "Inter regular";
-  width: 180px;
+  width: 155px;
+  font-size: 12px;
 `;
 const FormImageContainer = styled.div`
   position: absolute;
   right: 16px;
   bottom: 10px;
+  width: 10%;
 `;
 const FormImage = styled.img`
   width: 100%;
@@ -278,13 +314,88 @@ const Nav = styled.ul`
   display: flex;
   justify-content: space-between;
   width: 85%;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 `;
 const Menu = styled.li`
   color: #747474;
-  font-size: 15px;
-  &:hover {
-    
+  font-size: 13px;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    border-bottom: 1px solid var(--orange);
+    height: 1px;
+    width: 100px;
+    bottom: -6px;
+    left: -5px;
+    opacity: 0;
   }
-
+  &:hover {
+    font-weight: 700;
+    color: #000;
+  }
+  &:hover::after {
+    opacity: 1;
+  }
+`;
+const Content = styled.ul`
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 10px;
+`;
+const Productlist = styled.li`
+  background: #f6f5fa;
+  margin-bottom: 20px;
+  width: 32%;
+  border-radius: 15px;
+  overflow: hidden;
+`;
+const PicContainer = styled.div`
+  margin-bottom: 15px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  overflow: hidden;
+`;
+const Photo = styled.img`
+  width: 100%;
+  display: block;
+`;
+const Title = styled.h4`
+  font-size: 15px;
+  margin-left: 10px;
+  margin-bottom: 15px;
+`;
+const Detail = styled.div`
+  display: flex;
+  justify-content: space-around;
+  height: 30px;
+  align-items: center;
+`;
+const PriceContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+`;
+const Dollar = styled.span`
+  color: var(--orange);
+  display: inline-block;
+`;
+const DiscountPrice = styled.h4`
+  font-size: 20px;
+  font-weight: 700;
+`;
+const ActualPrice = styled.span`
+  display: inline-block;
+  color: #747474;
+  text-decoration: line-through;
+  font-size: 16px;
+`;
+const OrderButton = styled.button`
+  background-color: var(--orange);
+  border-radius: 50px;
+  color: #fff;
+  font-size: 12px;
+  height: 25px;
+  width: 50px;
 `;
