@@ -33,7 +33,7 @@ body {
 input,
 textarea,
 select {
-  font-family: "Inter regular", Arial, Helvetica, sans-serif;
+  font-family: "Inter Semibold", Arial, Helvetica, sans-serif;
   font-weight: 500;
   border: 1px solid #747474;
   padding: 10px 35px;

@@ -169,6 +169,53 @@ export default function Spotlight() {
               </ArrowContainer>
             </DateBar>
           </DateContainer>
+
+          <BreakfastContainer>
+            <CaptionContainer>
+              <Banner>Breakfast</Banner>
+              <Purchased>Purchased</Purchased>
+            </CaptionContainer>
+            <Time>06.30AM</Time>
+            <BreakFast>
+              <BreakFastList>
+                <BreakFastLeft>
+                  <BreakFastImgCont>
+                    <BreakFastImg
+                      src={require("../../Assets/images/six.jpg")}
+                    ></BreakFastImg>
+                  </BreakFastImgCont>
+                </BreakFastLeft>
+                <BreakFastRight>
+                  <Name>Nasi Goreng Park Parjo </Name>
+                  <Pricing>
+                    <Discount>
+                      <Dollar>$</Dollar>8,10
+                    </Discount>
+                    <Actual>$10,10</Actual>
+                  </Pricing>
+                </BreakFastRight>
+              </BreakFastList>
+
+              <BreakFastList>
+                <BreakFastLeft>
+                  <BreakFastImgCont>
+                    <BreakFastImg
+                      src={require("../../Assets/images/six.jpg")}
+                    ></BreakFastImg>
+                  </BreakFastImgCont>
+                </BreakFastLeft>
+                <BreakFastRight>
+                  <Name>Nasi Goreng Park Parjo </Name>
+                  <Pricing>
+                    <Discount>
+                      <Dollar>$</Dollar>8,10
+                    </Discount>
+                    <Actual>$10,10</Actual>
+                  </Pricing>
+                </BreakFastRight>
+              </BreakFastList>
+            </BreakFast>
+          </BreakfastContainer>
         </RightContainer>
       </MainContainer>
     </>
@@ -346,6 +393,7 @@ const SubHeading = styled.h3`
 `;
 const NavBar = styled.div`
   border-bottom: 1px solid #d4d4d4;
+  margin-bottom: 20px;
 `;
 const Nav = styled.ul`
   display: flex;
@@ -472,3 +520,24 @@ const Arrow = styled.img`
   display: block;
   width: 100%;
 `;
+const BreakfastContainer = styled.div``;
+const CaptionContainer = styled.div``;
+const Banner = styled.h5`
+  font-size: 15px;
+  font-weight: 700;
+`;
+const Purchased = styled.div``;
+const Time = styled.h4``;
+const BreakFast = styled.ul``;
+const BreakFastList = styled.li``;
+const BreakFastLeft = styled.div``;
+const BreakFastImgCont = styled.div``;
+const BreakFastImg = styled.img`
+  display: block;
+  width: 100%;
+`;
+const BreakFastRight = styled.div``;
+const Name = styled.h5``;
+const Pricing = styled.div``;
+const Discount = styled.h4``;
+const Actual = styled.h6``;
