@@ -2,8 +2,23 @@ import React from "react";
 import styled from "styled-components";
 import "../../App.css";
 import products from "../json/Product.json";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+import { useState } from "react";
 
 export default function Spotlight() {
+  const [startDate, setStartDate] = useState(new Date());
+  // function to render date
+  function renderDate() {
+    return (
+      <DatePicker
+        selected={startDate}
+        onChange={(date) => setStartDate(date)}
+        dateFormat="dd MMM yyyy"
+      />
+    );
+  }
+
   //function to render the products
   let renderProduct = () => {
     return products.map((product) => {
@@ -136,17 +151,37 @@ export default function Spotlight() {
 
           <Content>{renderProduct()}</Content>
         </MiddleContainer>
+
+        <RightContainer>
+          <DateContainer>
+            <HeadLine>Your meal plan</HeadLine>
+            <DateBar>
+              {renderDate()}
+              <CalenderContainer>
+                <Calender
+                  src={require("../../Assets/images/calender.svg").default}
+                ></Calender>
+              </CalenderContainer>
+              <ArrowContainer>
+                <Arrow
+                  src={require("../../Assets/images/arrowdown.svg").default}
+                ></Arrow>
+              </ArrowContainer>
+            </DateBar>
+          </DateContainer>
+        </RightContainer>
       </MainContainer>
     </>
   );
 }
 const MainContainer = styled.section`
-  height: 100vh;
-  padding: 20px 0;
+  // height: 100vh;
+
   display: flex;
 `;
 const LeftContainer = styled.aside`
   width: 10%;
+  padding: 20px 0;
 `;
 const ContentContainer = styled.div`
   width: 40%;
@@ -205,13 +240,14 @@ const Picture = styled.img`
 `;
 const MiddleContainer = styled.div`
   width: 70%;
+  padding: 20px 0;
 `;
 const Header = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 80px;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 `;
 const HeadLeft = styled.div`
   width: 35%;
@@ -291,6 +327,7 @@ const FormInput = styled.input`
   font-family: "Inter regular";
   width: 155px;
   font-size: 12px;
+  border: none;
 `;
 const FormImageContainer = styled.div`
   position: absolute;
@@ -398,4 +435,40 @@ const OrderButton = styled.button`
   font-size: 12px;
   height: 25px;
   width: 50px;
+`;
+const RightContainer = styled.aside`
+  background: #eeeeee;
+  width: 20%;
+  padding-left: 15px;
+`;
+const DateContainer = styled.div`
+  padding-top: 20px;
+`;
+const HeadLine = styled.h4`
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 10px;
+`;
+const DateBar = styled.div`
+  position: relative;
+`;
+const CalenderContainer = styled.div`
+  width: 23px;
+  top: 7px;
+  position: absolute;
+  left: 3px;
+`;
+const Calender = styled.img`
+  display: block;
+  width: 100%;
+`;
+const ArrowContainer = styled.div`
+  width: 20px;
+  position: absolute;
+  top: 10px;
+  right: 26px;
+`;
+const Arrow = styled.img`
+  display: block;
+  width: 100%;
 `;
