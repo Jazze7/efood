@@ -1,75 +1,54 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import styled from "styled-components";
-import LeftBar from "./LeftBar";
-import Right from "./Right";
-
-function IceCream() {
+import { Link } from "react-router-dom";
+export default function Middle() {
   return (
     <>
-      <Container>
-        <LeftBar />
-        {/* Structuring of middle container starts */}
-        <MiddleContainer>
-          <Header>
-            <HeadLeft>
-              <Heading>Welcome,Epan Danis!</Heading>
-              <SmallHeading>
-                Dont forget to have breakfast today yeah !
-              </SmallHeading>
-            </HeadLeft>
-            <HeadRight>
-              <Buttons>
-                <MenuButton>Menu</MenuButton>
-                <MealButton>Meal plans</MealButton>
-                <DeliveryButton>Delivery</DeliveryButton>
-              </Buttons>
-              <FormSearch>
-                <FormInput placeholder="Search your food..."></FormInput>
-                <FormImageContainer>
-                  <FormImage
-                    src={require("../../Assets/images/search.svg").default}
-                  ></FormImage>
-                </FormImageContainer>
-              </FormSearch>
-            </HeadRight>
-          </Header>
+      {/* Structuring of middle container starts */}
+      <MiddleContainer>
+        <Header>
+          <HeadLeft>
+            <Heading>Welcome,Epan Danis!</Heading>
+            <SmallHeading>
+              Dont forget to have breakfast today yeah !
+            </SmallHeading>
+          </HeadLeft>
+          <HeadRight>
+            <Buttons>
+              <MenuButton>Menu</MenuButton>
+              <MealButton>Meal plans</MealButton>
+              <DeliveryButton>Delivery</DeliveryButton>
+            </Buttons>
+            <FormSearch>
+              <FormInput placeholder="Search your food..."></FormInput>
+              <FormImageContainer>
+                <FormImage
+                  src={require("../../Assets/images/search.svg").default}
+                ></FormImage>
+              </FormImageContainer>
+            </FormSearch>
+          </HeadRight>
+        </Header>
 
-          <SubHeading>Find the menu you want</SubHeading>
+        <SubHeading>Find the menu you want</SubHeading>
 
-          <NavBar>
-            <Nav>
-              <Menu to="/">Recommended</Menu>
-              <Menu to="/breakfast">Breakfast</Menu>
-              <Menu to="/lunch">Lunch</Menu>
-              <Menu to="/dinner">Dinner</Menu>
-              <Menu to="/icecream">Ice Cream</Menu>
-              <Menu to="/coffee">Coffee</Menu>
-            </Nav>
-          </NavBar>
+        <NavBar>
+          <Nav>
+            <Menu to="/">Recommended</Menu>
+            <Menu to="/breakfast">Breakfast</Menu>
+            <Menu to="/lunch">Lunch</Menu>
+            <Menu to="/dinner">Dinner</Menu>
+            <Menu to="/icecream">Ice Cream</Menu>
+            <Menu to="/coffee">Coffee</Menu>
+          </Nav>
+        </NavBar>
 
-          <Content>
-            <ImageContainer>
-              <Image src={require("../../Assets/images/icecream.webp")}></Image>
-            </ImageContainer>
-          </Content>
-        </MiddleContainer>
-        {/* Structuring of Middle container ends */}
-        <Right />
-      </Container>
+        <Content></Content>
+      </MiddleContainer>
+      {/* Structuring of Middle container ends */}
     </>
   );
 }
-
-export default IceCream;
-const Container = styled.div`
-  height: 100vh;
-  display: flex;
-`;
-const Data = styled.h1`
-  font-size: large;
-  color: red;
-`;
 const MiddleContainer = styled.div`
   width: 70%;
   padding: 20px 0;
@@ -209,8 +188,3 @@ const Menu = styled(Link)`
   }
 `;
 const Content = styled.div``;
-const ImageContainer = styled.div``;
-const Image = styled.img`
-  width: 100%;
-  display: block;
-`;

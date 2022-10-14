@@ -1,61 +1,40 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import PageNotImg from "../../assets/images/pagenotfound.jpg";
+import "../../page.css";
 function PageNotFound() {
-    return (
-        <>
-            <Sectionmain>
-                <Container>
-                    <Message>Oops..! 404 Page Not Found</Message>
-                    <PageMessage>
-                        Looks like you came to wrong page on our server
-                    </PageMessage>
-                    {/* <ImageContainer>
-                        <Photo src={PageNotImg} alt="Image" />
-                    </ImageContainer> */}
-                    <BackContainer>
-                        <Link to="/">Back To Home</Link>
-                    </BackContainer>
-                </Container>
-            </Sectionmain>
-        </>
-    );
+  return (
+    <>
+      <section class="page_404">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12 ">
+              <div class="col-sm-10 col-sm-offset-1  text-center">
+                <div class="four_zero_four_bg">
+                  <h1 class="text-center ">404</h1>
+                </div>
+
+                <div class="contant_box_404">
+                  <h3 class="h2">Look like you're lost</h3>
+
+                  <p>the page you are looking for not avaible!</p>
+
+                  <Rout to="/"> Go to Home</Rout>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
+  );
 }
 
 export default PageNotFound;
-const Sectionmain = styled.section`
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-`;
-const Container = styled.div`
-    text-align: center;
-`;
-const Message = styled.h1`
-    font-size: 34px;
-    font-weight: bold;
-    margin-bottom: 20px;
-`;
-const PageMessage = styled.p`
-    font-size: 16px;
-    color: var(--Orange);
-    font-weight: 600;
-`;
-const ImageContainer = styled.div`
-    width: 500px;
-`;
-const Photo = styled.img`
-    display: block;
-    width: 100%;
-`;
-const BackContainer = styled.h4`
-    padding: 10px 16px;
-    color: #76cc90;
-    background: #d9ffe6;
-    font-size: 16px;
-    font-weight: 600;
-    border-radius: 25px;
-    cursor: pointer;
+const Rout = styled(Link)`
+  color: #fff !important;
+  padding: 10px 20px;
+  background: #39ac31;
+  margin: 20px 0;
+  display: inline-block;
 `;

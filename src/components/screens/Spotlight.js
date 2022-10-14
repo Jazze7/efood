@@ -5,6 +5,7 @@ import products from "../json/Product.json";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Spotlight() {
   const [startDate, setStartDate] = useState(new Date());
@@ -143,12 +144,12 @@ export default function Spotlight() {
 
           <NavBar>
             <Nav>
-              <Menu>Recommended</Menu>
-              <Menu>Breakfast</Menu>
-              <Menu>Lunch</Menu>
-              <Menu>Dinner</Menu>
-              <Menu>Ice Cream</Menu>
-              <Menu>Coffee</Menu>
+              <Menu to="/">Recommended</Menu>
+              <Menu to="/breakfast">Breakfast</Menu>
+              <Menu to="/lunch">Lunch</Menu>
+              <Menu to="/dinner">Dinner</Menu>
+              <Menu to="/icecream">Ice Cream</Menu>
+              <Menu to="/coffee">Coffee</Menu>
             </Nav>
           </NavBar>
 
@@ -403,7 +404,7 @@ const HeadRight = styled.div`
   justify-content: space-evenly;
 `;
 const Buttons = styled.div`
-  width: 50%;
+  width: 40%;
   display: flex;
   justify-content: space-between;
 `;
@@ -489,7 +490,7 @@ const Nav = styled.ul`
   width: 85%;
   margin-bottom: 5px;
 `;
-const Menu = styled.li`
+const Menu = styled(Link)`
   color: #747474;
   font-size: 13px;
   position: relative;
@@ -538,6 +539,7 @@ const Title = styled.h4`
   font-size: 15px;
   margin-left: 10px;
   margin-bottom: 15px;
+  font-weight: 600;
 `;
 const Detail = styled.div`
   display: flex;
