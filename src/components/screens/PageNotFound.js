@@ -2,9 +2,13 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import "../../page.css";
+import { Helmet } from "react-helmet";
 function PageNotFound() {
   return (
     <>
+      <Helmet>
+        <title>Page Not Found</title>
+      </Helmet>
       <section class="page_404">
         <div class="container">
           <div class="row">

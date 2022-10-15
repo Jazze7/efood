@@ -386,6 +386,10 @@ const Header = styled.div`
 `;
 const HeadLeft = styled.div`
   width: 35%;
+
+  @media all and (max-width: 1080px) {
+    width: 40%;
+  }
 `;
 const Heading = styled.h2`
   font-size: 24px;
@@ -406,6 +410,13 @@ const Buttons = styled.div`
   width: 40%;
   display: flex;
   justify-content: space-between;
+
+  @media all and (max-width: 1280px) {
+    width: 50%;
+  }
+  @media all and (max-width: 1080px) {
+    width: 55%;
+  }
 `;
 const MenuButton = styled.button`
   height: 35px;
@@ -558,6 +569,10 @@ const Dollar = styled.span`
 const DiscountPrice = styled.h4`
   font-size: 20px;
   font-weight: 700;
+
+  @media all and (max-width: 1080px) {
+    font-size: 17px;
+  }
 `;
 const ActualPrice = styled.span`
   display: inline-block;
@@ -771,4 +786,7 @@ const Drop = styled.div`
   color: #d8772a;
   font-weight: 600;
   background-color: #ffecde;
+  @media all and (max-width: 1080px) {
+    padding: 10px 30px;
+  }
 `;

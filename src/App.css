@@ -116,3 +116,8 @@ p {
 :root{
   --orange : #F46801;
 }
+@media all and (max-width:1080px){
+ input{
+  padding: 10px 45px;
+ }
+}

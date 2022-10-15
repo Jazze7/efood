@@ -67,10 +67,7 @@ const Container = styled.div`
   height: 100vh;
   display: flex;
 `;
-const Data = styled.h1`
-  font-size: large;
-  color: red;
-`;
+
 const MiddleContainer = styled.div`
   width: 70%;
   padding: 20px 0;
