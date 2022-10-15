@@ -320,10 +320,16 @@ const MainContainer = styled.section`
 const LeftContainer = styled.aside`
   width: 10%;
   padding: 20px 0;
+  @media all and (max-width: 768px) {
+    width: 12%;
+  }
 `;
 const ContentContainer = styled.div`
   width: 40%;
   margin: 0 auto;
+  @media all and (max-width: 768px) {
+    width: 50%;
+  }
 `;
 const LogoContainer = styled.div`
   width: 100%;
@@ -337,7 +343,11 @@ const WidgetContainer = styled.ul`
   margin: 120px 0;
   padding: 20px 0;
   border-radius: 50px;
+  @media all and (max-width: 768px) {
+    margin: 180px 0;
+  }
 `;
+
 const WidgetImageContainer = styled.li`
   width: 40%;
   margin: 0 auto 20px;
@@ -389,6 +399,9 @@ const Header = styled.div`
 `;
 const HeadLeft = styled.div`
   width: 35%;
+  @media all and (max-width: 768px) {
+    width: 40%;
+  }
 `;
 const Heading = styled.h2`
   font-size: 24px;
@@ -405,11 +418,18 @@ const SmallHeading = styled.h6`
   @media all and (max-width: 980px) {
     font-size: 8.5px;
   }
+  @media all and (max-width: 768px) {
+    font-size: 9.5px;
+  }
 `;
 const HeadRight = styled.div`
   width: 70%;
   display: flex;
   justify-content: space-evenly;
+
+  @media all and (max-width: 768px) {
+    width: 58%;
+  }
 `;
 const Buttons = styled.div`
   width: 40%;
@@ -425,6 +445,8 @@ const Buttons = styled.div`
   @media all and (max-width: 980px) {
     width: 58%;
   }
+  @media all and (max-width: 768px) {
+    width: 80%;
 `;
 const MenuButton = styled.button`
   height: 35px;
@@ -443,6 +465,11 @@ const MenuButton = styled.button`
     height: 30px;
     width: 50px;
     font-size: 11px;
+    // @media all and (max-width: 768px) {
+    //   height: 25px;
+    //   width: 40px;
+    //   font-size: 9px;
+    // }
 `;
 const MealButton = styled.button`
   height: 35px;
@@ -484,6 +511,9 @@ const DeliveryButton = styled.button`
 const FormSearch = styled.form`
   display: flex;
   position: relative;
+  @media all and (max-width: 768px) {
+    display: none;
+  }
 `;
 const FormInput = styled.input`
   padding: 10px 15px;
@@ -517,6 +547,9 @@ const SubHeading = styled.h3`
   font-size: 20px;
   font-weight: 700;
   margin-bottom: 20px;
+  @media all and (max-width: 768px) {
+    font-size: 16px;
+  }
 `;
 const NavBar = styled.div`
   border-bottom: 1px solid #d4d4d4;
@@ -527,6 +560,9 @@ const Nav = styled.ul`
   justify-content: space-between;
   width: 85%;
   margin-bottom: 5px;
+  @media all and (max-width: 768px) {
+    width: 95%;
+  }
 `;
 const Menu = styled(Link)`
   color: #747474;
@@ -562,6 +598,10 @@ const Productlist = styled.li`
   width: 32%;
   border-radius: 15px;
   overflow: hidden;
+  @media all and (max-width: 768px) {
+    flex-wrap: wrap;
+    width: 48%;
+  }
 `;
 const PicContainer = styled.div`
   margin-bottom: 15px;
@@ -584,8 +624,8 @@ const Title = styled.h4`
 `;
 const Detail = styled.div`
   display: flex;
-  justify-content: space-between;
-  height: 30px;
+  justify-content: space-around;
+  height: 35px;
   align-items: center;
   @media all and (max-width: 980px) {
     justify-content: space-around;
@@ -640,6 +680,9 @@ const RightContainer = styled.aside`
   background: #eeeeee;
   width: 20%;
   padding: 0 15px;
+  @media all and (max-width: 768px) {
+    width: 25%;
+  }
 `;
 const DateContainer = styled.div`
   padding-top: 20px;
