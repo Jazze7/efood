@@ -421,6 +421,9 @@ const Heading = styled.h2`
   @media all and (max-width: 640px) {
     font-size: 25px;
   }
+  @media all and (max-width: 480px) {
+    font-size: 20px;
+  }
 `;
 const SmallHeading = styled.h6`
   font-size: 12px;
@@ -434,6 +437,9 @@ const SmallHeading = styled.h6`
   }
   @media all and (max-width: 640px) {
     font-size: 11px;
+  }
+  @media all and (max-width: 480px) {
+    font-size: 10px;
   }
 `;
 const HeadRight = styled.div`
@@ -607,6 +613,9 @@ const Menu = styled(Link)`
   @media all and (max-width: 640px) {
     font-size: 10px;
   }
+  @media all and (max-width: 480px) {
+    font-size: 8px;
+  }
 `;
 const Content = styled.ul`
   display: flex;
@@ -724,6 +733,10 @@ const HeadLine = styled.h4`
   margin-bottom: 10px;
   @media all and (max-width: 980px) {
     font-size: 15px;
+  }
+  @media all and (max-width: 480px) {
+    font-size: 11px;
+  }
 `;
 const DateBar = styled.div`
   position: relative;
@@ -735,6 +748,9 @@ const CalenderContainer = styled.div`
   left: 7px;
   @media all and (max-width: 980px) {
     width: 20px;
+  }
+  @media all and (max-width: 480px) {
+    display: none;
   }
 `;
 const Calender = styled.img`
@@ -750,6 +766,9 @@ const ArrowContainer = styled.div`
     width: 13px;
     right: 11px;
   }
+  @media all and (max-width: 480px) {
+    display: none;
+  }
 `;
 const Arrow = styled.img`
   display: block;
@@ -763,6 +782,10 @@ const CaptionContainer = styled.div`
   justify-content: space-between;
   margin-top: 20px;
   margin-bottom: 20px;
+  @media all and (max-width: 480px) {
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
 `;
 const Banner = styled.h5`
   font-size: 15px;
@@ -786,11 +809,17 @@ const Purchased = styled.div`
     // margin-left: 8px;
     padding: 3px 10px;
   }
+  @media all and (max-width: 480px) {
+    display: none;
+  }
 `;
 const Time = styled.h5`
   font-size: 12px;
   font-weight: 700;
   margin-bottom: 10px;
+  @media all and (max-width: 480px) {
+    font-size: 10px;
+  }
 `;
 const BreakFast = styled.ul``;
 const BreakFastList = styled.li`
@@ -805,6 +834,9 @@ const BreakFastLeft = styled.div`
   width: 35%;
   @media all and (max-width: 980px) {
     width: 70%;
+  }
+  @media all and (max-width: 480px) {
+    display: none;
   }
 `;
 const BreakFastImgCont = styled.div`
@@ -824,6 +856,10 @@ const BreakFastRight = styled.div`
   width: 62%;
   @media all and (max-width: 980px) {
     width: 70%;
+  }
+  @media all and (max-width: 480px) {
+    width: 98%;
+    margin-left: 3px;
   }
 `;
 const Name = styled.h5`
@@ -870,9 +906,7 @@ const Lemma = styled.h5`
   font-weight: 700;
   @media all and (max-width: 980px) {
     font-size: 12px;
-  @media all and (max-width:640px){
-    font-size: 11px;
-  }
+   
 `;
 
 const Being = styled.div`
@@ -889,6 +923,9 @@ const Being = styled.div`
     @media all and (max-width: 640px) {
       padding: 3px 6px;
     }
+    @media all and (max-width: 480px) {
+      display: none;
+    }
 `;
 
 const Lunch = styled.ul``;
@@ -904,6 +941,9 @@ const LunchLeft = styled.div`
   width: 35%;
   @media all and (max-width: 980px) {
     width: 70%;
+  }
+  @media all and (max-width: 480px) {
+    display: none;
   }
 `;
 const LunchImgCont = styled.div`
@@ -924,6 +964,10 @@ const LunchRight = styled.div`
   @media all and (max-width: 980px) {
     width: 70%;
   }
+  @media all and (max-width: 480px) {
+    width: 100%;
+    margin-left: 3px;
+  }
 `;
 const DisCounter = styled.div`
   display: flex;
@@ -941,6 +985,9 @@ const Order = styled.div`
     font-size: 8px;
     padding: 3px 2px;
   }
+  @media all and (max-width: 480px) {
+    display: none;
+  }
 `;
 const Dinner = styled.ul``;
 const DinnerList = styled.li`
@@ -953,6 +1000,9 @@ const DinnerList = styled.li`
 `;
 const DinnerLeft = styled.div`
   width: 35%;
+  @media all and (max-width: 480px) {
+    display: none;
+  }
 `;
 const DinnerImgCont = styled.div`
   width: 100%;
@@ -966,6 +1016,10 @@ const DinnerImg = styled.img`
 `;
 const DinnerRight = styled.div`
   width: 62%;
+  @media all and (max-width: 480px) {
+    width: 100%;
+    margin-left: 3px;
+  }
 `;
 const DropContainer = styled.div`
   padding-top: 10px;
@@ -984,5 +1038,8 @@ const Drop = styled.div`
   @media all and (max-width: 980px) {
     padding: 10px 15px;
     font-size: 11px;
+  }
+  @media all and (max-width: 480px) {
+    display: none;
   }
 `;
