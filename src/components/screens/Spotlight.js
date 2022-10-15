@@ -9,6 +9,42 @@ import { Link } from "react-router-dom";
 
 export default function Spotlight() {
   const [startDate, setStartDate] = useState(new Date());
+  const [orders, setOrders] = useState([]);
+  // const [newOrder, setNewOrder] = useState("");
+
+  // add to cart
+  const addToCart = (id) => {
+    let new_food = products.find((products) => products.id === id);
+    setOrders([...orders, new_food]);
+  };
+
+  // render order function
+  const renderOrder = () => {
+    return orders.map((product) => {
+      return (
+        <BreakFastList>
+          <BreakFastLeft>
+            <BreakFastImgCont>
+              <BreakFastImg
+                src={require(`../../Assets/images/${product.image}`)}
+              ></BreakFastImg>
+            </BreakFastImgCont>
+          </BreakFastLeft>
+          <BreakFastRight>
+            <Name>{product.title} </Name>
+            <Pricing>
+              <Discount>
+                <DollarSign>$</DollarSign>
+                {product.Discount_Price}
+              </Discount>
+              <Actual>{product.Actual_Price}</Actual>
+            </Pricing>
+          </BreakFastRight>
+        </BreakFastList>
+      );
+    });
+  };
+
   // function to render date
   function renderDate() {
     return (
@@ -39,7 +75,9 @@ export default function Spotlight() {
               </DiscountPrice>
               <ActualPrice>{product.Actual_Price}</ActualPrice>
             </PriceContainer>
-            <OrderButton>Order</OrderButton>
+            <OrderButton onClick={() => addToCart(product.id)}>
+              Order
+            </OrderButton>
           </Detail>
         </Productlist>
       );
@@ -182,46 +220,7 @@ export default function Spotlight() {
               <Purchased>Purchased</Purchased>
             </CaptionContainer>
             <Time>06.30AM</Time>
-            <BreakFast>
-              <BreakFastList>
-                <BreakFastLeft>
-                  <BreakFastImgCont>
-                    <BreakFastImg
-                      src={require("../../Assets/images/six.jpg")}
-                    ></BreakFastImg>
-                  </BreakFastImgCont>
-                </BreakFastLeft>
-                <BreakFastRight>
-                  <Name>Nasi Goreng Park Parjo </Name>
-                  <Pricing>
-                    <Discount>
-                      <DollarSign>$</DollarSign>8,10
-                    </Discount>
-                    <Actual>$10,10</Actual>
-                  </Pricing>
-                </BreakFastRight>
-              </BreakFastList>
-            </BreakFast>
-            <BreakFast>
-              <BreakFastList>
-                <BreakFastLeft>
-                  <BreakFastImgCont>
-                    <BreakFastImg
-                      src={require("../../Assets/images/six.jpg")}
-                    ></BreakFastImg>
-                  </BreakFastImgCont>
-                </BreakFastLeft>
-                <BreakFastRight>
-                  <Name>Nasi Goreng Park Parjo </Name>
-                  <Pricing>
-                    <Discount>
-                      <DollarSign>$</DollarSign>8,10
-                    </Discount>
-                    <Actual>$10,10</Actual>
-                  </Pricing>
-                </BreakFastRight>
-              </BreakFastList>
-            </BreakFast>
+            <BreakFast>{renderOrder()}</BreakFast>
           </BreakfastContainer>
 
           <LunchContainer>
@@ -573,6 +572,9 @@ const OrderButton = styled.button`
   font-size: 12px;
   height: 25px;
   width: 50px;
+  &:hover {
+    cursor: pointer;
+  }
 `;
 const RightContainer = styled.aside`
   background: #eeeeee;

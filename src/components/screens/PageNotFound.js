@@ -37,4 +37,7 @@ const Rout = styled(Link)`
   background: #39ac31;
   margin: 20px 0;
   display: inline-block;
+  border-radius: 8px;
+  font-family: "Inter Bold";
+  font-size: 12px;
 `;

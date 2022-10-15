@@ -52,6 +52,7 @@ function IceCream() {
             <ImageContainer>
               <Image src={require("../../Assets/images/icecream.webp")}></Image>
             </ImageContainer>
+            <Caption>Coming to you real soon</Caption>
           </Content>
         </MiddleContainer>
         {/* Structuring of Middle container ends */}
@@ -209,8 +210,22 @@ const Menu = styled(Link)`
   }
 `;
 const Content = styled.div``;
-const ImageContainer = styled.div``;
+const ImageContainer = styled.div`
+  width: 30%;
+  margin: auto;
+  border-radius: 10px;
+  padding-top: 20px;
+  overflow: hidden;
+`;
 const Image = styled.img`
   width: 100%;
   display: block;
+  overflow: hidden;
+`;
+const Caption = styled.h2`
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: 20px;
+  text-align: center;
+  color: var(--orange);
 `;
