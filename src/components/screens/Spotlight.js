@@ -323,12 +323,18 @@ const LeftContainer = styled.aside`
   @media all and (max-width: 768px) {
     width: 12%;
   }
+  @media all and (max-width: 640px) {
+    width: 15%;
+  }
 `;
 const ContentContainer = styled.div`
   width: 40%;
   margin: 0 auto;
   @media all and (max-width: 768px) {
     width: 50%;
+  }
+  @media all and (max-width: 640px) {
+    width: 75%;
   }
 `;
 const LogoContainer = styled.div`
@@ -401,6 +407,8 @@ const HeadLeft = styled.div`
   width: 35%;
   @media all and (max-width: 768px) {
     width: 40%;
+    @media all and (max-width: 640px) {
+      width:100%;
   }
 `;
 const Heading = styled.h2`
@@ -409,6 +417,9 @@ const Heading = styled.h2`
   margin-bottom: 10px;
   @media all and (max-width: 980px) {
     font-size: 16px;
+  }
+  @media all and (max-width: 640px) {
+    font-size: 25px;
   }
 `;
 const SmallHeading = styled.h6`
@@ -421,6 +432,9 @@ const SmallHeading = styled.h6`
   @media all and (max-width: 768px) {
     font-size: 9.5px;
   }
+  @media all and (max-width: 640px) {
+    font-size: 11px;
+  }
 `;
 const HeadRight = styled.div`
   width: 70%;
@@ -430,6 +444,8 @@ const HeadRight = styled.div`
   @media all and (max-width: 768px) {
     width: 58%;
   }
+  @media all and (max-width: 640px) {
+    display :none;
 `;
 const Buttons = styled.div`
   width: 40%;
@@ -563,6 +579,9 @@ const Nav = styled.ul`
   @media all and (max-width: 768px) {
     width: 95%;
   }
+  @media all and (max-width: 640px) {
+    width: 100%;
+  }
 `;
 const Menu = styled(Link)`
   color: #747474;
@@ -585,6 +604,9 @@ const Menu = styled(Link)`
   &:hover::after {
     opacity: 1;
   }
+  @media all and (max-width: 640px) {
+    font-size: 10px;
+  }
 `;
 const Content = styled.ul`
   display: flex;
@@ -601,6 +623,10 @@ const Productlist = styled.li`
   @media all and (max-width: 768px) {
     flex-wrap: wrap;
     width: 48%;
+  }
+  @media all and (max-width: 640px) {
+    width: 75%;
+    margin: 0 auto 15px auto;
   }
 `;
 const PicContainer = styled.div`
@@ -682,6 +708,11 @@ const RightContainer = styled.aside`
   padding: 0 15px;
   @media all and (max-width: 768px) {
     width: 25%;
+    padding: 0 8px;
+  }
+  @media all and (max-width: 640px) {
+    width: 30%;
+    padding: 0 8px;
   }
 `;
 const DateContainer = styled.div`
@@ -739,6 +770,9 @@ const Banner = styled.h5`
   @media all and (max-width: 980px) {
     font-size: 12px;
   }
+  @media all and (max-width: 640) {
+    font-size: 11px;
+  }
 `;
 const Purchased = styled.div`
   background: #d9ffe5;
@@ -749,7 +783,7 @@ const Purchased = styled.div`
   font-weight: 700;
   @media all and (max-width: 980px) {
     font-size: 9px;
-    margin-left: 8px;
+    // margin-left: 8px;
     padding: 3px 10px;
   }
 `;
@@ -836,7 +870,11 @@ const Lemma = styled.h5`
   font-weight: 700;
   @media all and (max-width: 980px) {
     font-size: 12px;
+  @media all and (max-width:640px){
+    font-size: 11px;
+  }
 `;
+
 const Being = styled.div`
   font-size: 10px;
   border-radius: 10px;
@@ -848,7 +886,11 @@ const Being = styled.div`
     margin-left:7px;
     font-size: 9px;
     padding: 3px 10px;
+    @media all and (max-width: 640px) {
+      padding: 3px 6px;
+    }
 `;
+
 const Lunch = styled.ul``;
 const LunchList = styled.li`
   display: flex;
