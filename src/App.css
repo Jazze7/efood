@@ -121,3 +121,10 @@ p {
   padding: 10px 45px;
  }
 }
+@media all and (max-width: 980px){
+  input{
+    font-size: 10px;
+    width: 120px;
+    padding: 9px 29px;
+  }
+}

@@ -10,7 +10,6 @@ import { Link } from "react-router-dom";
 export default function Spotlight() {
   const [startDate, setStartDate] = useState(new Date());
   const [orders, setOrders] = useState([]);
-  // const [newOrder, setNewOrder] = useState("");
 
   // add to cart
   const addToCart = (id) => {
@@ -33,10 +32,12 @@ export default function Spotlight() {
           <BreakFastRight>
             <Name>{product.title} </Name>
             <Pricing>
-              <Discount>
-                <DollarSign>$</DollarSign>
-                {product.Discount_Price}
-              </Discount>
+              <DisCounter>
+                <Discount>
+                  <DollarSign>$</DollarSign>
+                  {product.Discount_Price}
+                </Discount>
+              </DisCounter>
               <Actual>{product.Actual_Price}</Actual>
             </Pricing>
           </BreakFastRight>
@@ -241,9 +242,11 @@ export default function Spotlight() {
                 <LunchRight>
                   <Name>Nasi Goreng Park Parjo </Name>
                   <Pricing>
-                    <Discount>
-                      <DollarSign>$</DollarSign>8,10
-                    </Discount>
+                    <DisCounter>
+                      <Discount>
+                        <DollarSign>$</DollarSign>8,10
+                      </Discount>
+                    </DisCounter>
                     <Actual>$10,10</Actual>
                   </Pricing>
                 </LunchRight>
@@ -386,20 +389,22 @@ const Header = styled.div`
 `;
 const HeadLeft = styled.div`
   width: 35%;
-
-  @media all and (max-width: 1080px) {
-    width: 40%;
-  }
 `;
 const Heading = styled.h2`
   font-size: 24px;
   font-weight: 700;
   margin-bottom: 10px;
+  @media all and (max-width: 980px) {
+    font-size: 16px;
+  }
 `;
 const SmallHeading = styled.h6`
   font-size: 12px;
   font-weight: 700;
   color: #757575;
+  @media all and (max-width: 980px) {
+    font-size: 8.5px;
+  }
 `;
 const HeadRight = styled.div`
   width: 70%;
@@ -417,6 +422,9 @@ const Buttons = styled.div`
   @media all and (max-width: 1080px) {
     width: 55%;
   }
+  @media all and (max-width: 980px) {
+    width: 58%;
+  }
 `;
 const MenuButton = styled.button`
   height: 35px;
@@ -431,6 +439,10 @@ const MenuButton = styled.button`
     background-color: var(--orange);
     color: #fff;
   }
+  @media all and (max-width: 980px) {
+    height: 30px;
+    width: 50px;
+    font-size: 11px;
 `;
 const MealButton = styled.button`
   height: 35px;
@@ -445,6 +457,10 @@ const MealButton = styled.button`
     background-color: var(--orange);
     color: #fff;
   }
+  @media all and (max-width: 980px) {
+    height: 30px;
+    width: 75px;
+    font-size: 11px;
 `;
 const DeliveryButton = styled.button`
   height: 35px;
@@ -458,6 +474,11 @@ const DeliveryButton = styled.button`
   &:hover {
     background-color: var(--orange);
     color: #fff;
+  }
+  @media all and (max-width: 980px) {
+    height: 30px;
+    width: 55px;
+    font-size: 11px;
   }
 `;
 const FormSearch = styled.form`
@@ -474,12 +495,19 @@ const FormInput = styled.input`
   width: 155px;
   font-size: 12px;
   border: none;
+  @media all and (max-width: 980px) {
+    width: 120px;
+    padding: 9px 8px;
+    font-size: 11px;
+
 `;
 const FormImageContainer = styled.div`
   position: absolute;
   right: 16px;
   bottom: 10px;
   width: 10%;
+  @media all and (max-width: 980px) {
+    right:3px;
 `;
 const FormImage = styled.img`
   width: 100%;
@@ -550,17 +578,26 @@ const Title = styled.h4`
   margin-left: 10px;
   margin-bottom: 15px;
   font-weight: 600;
+  @media all and (max-width: 980px) {
+    font-size: 12px;
+  }
 `;
 const Detail = styled.div`
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   height: 30px;
   align-items: center;
+  @media all and (max-width: 980px) {
+    justify-content: space-around;
+  }
 `;
 const PriceContainer = styled.div`
   display: flex;
   justify-content: space-between;
   width: 50%;
+  @media all and (max-width: 980px) {
+    width: 59%;
+  }
 `;
 const Dollar = styled.span`
   color: var(--orange);
@@ -579,6 +616,9 @@ const ActualPrice = styled.span`
   color: #747474;
   text-decoration: line-through;
   font-size: 16px;
+  @media all and (max-width: 980px) {
+    font-size: 14px;
+  }
 `;
 const OrderButton = styled.button`
   background-color: var(--orange);
@@ -589,6 +629,11 @@ const OrderButton = styled.button`
   width: 50px;
   &:hover {
     cursor: pointer;
+  }
+  @media all and (max-width: 980px) {
+    height: 20px;
+    width: 40px;
+    font-size: 11px;
   }
 `;
 const RightContainer = styled.aside`
@@ -603,6 +648,8 @@ const HeadLine = styled.h4`
   font-size: 18px;
   font-weight: 700;
   margin-bottom: 10px;
+  @media all and (max-width: 980px) {
+    font-size: 15px;
 `;
 const DateBar = styled.div`
   position: relative;
@@ -612,6 +659,9 @@ const CalenderContainer = styled.div`
   top: 7px;
   position: absolute;
   left: 7px;
+  @media all and (max-width: 980px) {
+    width: 20px;
+  }
 `;
 const Calender = styled.img`
   display: block;
@@ -622,6 +672,10 @@ const ArrowContainer = styled.div`
   position: absolute;
   top: 10px;
   right: 10px;
+  @media all and (max-width: 980px) {
+    width: 13px;
+    right: 11px;
+  }
 `;
 const Arrow = styled.img`
   display: block;
@@ -639,6 +693,9 @@ const CaptionContainer = styled.div`
 const Banner = styled.h5`
   font-size: 15px;
   font-weight: 700;
+  @media all and (max-width: 980px) {
+    font-size: 12px;
+  }
 `;
 const Purchased = styled.div`
   background: #d9ffe5;
@@ -647,6 +704,11 @@ const Purchased = styled.div`
   border-radius: 10px;
   padding: 3px 11px;
   font-weight: 700;
+  @media all and (max-width: 980px) {
+    font-size: 9px;
+    margin-left: 8px;
+    padding: 3px 10px;
+  }
 `;
 const Time = styled.h5`
   font-size: 12px;
@@ -664,12 +726,18 @@ const BreakFastList = styled.li`
 `;
 const BreakFastLeft = styled.div`
   width: 35%;
+  @media all and (max-width: 980px) {
+    width: 70%;
+  }
 `;
 const BreakFastImgCont = styled.div`
   width: 100%;
   overflow: hidden;
   border-bottom-left-radius: 6px;
   border-top-left-radius: 6px;
+  @media all and (max-width: 980px) {
+    width: 95%;
+  }
 `;
 const BreakFastImg = styled.img`
   display: block;
@@ -677,11 +745,17 @@ const BreakFastImg = styled.img`
 `;
 const BreakFastRight = styled.div`
   width: 62%;
+  @media all and (max-width: 980px) {
+    width: 70%;
+  }
 `;
 const Name = styled.h5`
   font-size: 10px;
   font-weight: 700;
   margin-bottom: 10px;
+  @media all and (max-width: 980px) {
+    font-size: 9px;
+  }
 `;
 const Pricing = styled.div`
   display: flex;
@@ -693,20 +767,32 @@ const DollarSign = styled.span`
   display: inline-block;
   font-size: 10px;
   color: var(--orange);
+  @media all and (max-width: 980px) {
+    display: inline;
+  }
 `;
 const Discount = styled.h4`
   font-size: 12px;
   font-weight: 700;
+  @media all and (max-width: 980px) {
+    font-size: 10px;
+  }
 `;
 const Actual = styled.h6`
   font-size: 10px;
   text-decoration: line-through;
   color: #747474;
+  @media all and (max-width: 980px) {
+    font-size: 9px;
+    margin-left: 5px;
+  }
 `;
 const LunchContainer = styled.div``;
 const Lemma = styled.h5`
   font-size: 15px;
   font-weight: 700;
+  @media all and (max-width: 980px) {
+    font-size: 12px;
 `;
 const Being = styled.div`
   font-size: 10px;
@@ -715,6 +801,10 @@ const Being = styled.div`
   color: #dfb77f;
   padding: 3px 11px;
   font-weight: 700;
+  @media all and (max-width: 980px) {
+    margin-left:7px;
+    font-size: 9px;
+    padding: 3px 10px;
 `;
 const Lunch = styled.ul``;
 const LunchList = styled.li`
@@ -727,12 +817,18 @@ const LunchList = styled.li`
 `;
 const LunchLeft = styled.div`
   width: 35%;
+  @media all and (max-width: 980px) {
+    width: 70%;
+  }
 `;
 const LunchImgCont = styled.div`
   width: 100%;
   overflow: hidden;
   border-bottom-left-radius: 6px;
   border-top-left-radius: 6px;
+  @media all and (max-width: 980px) {
+    width: 95%;
+  }
 `;
 const LunchImg = styled.img`
   display: block;
@@ -740,6 +836,13 @@ const LunchImg = styled.img`
 `;
 const LunchRight = styled.div`
   width: 62%;
+  @media all and (max-width: 980px) {
+    width: 70%;
+  }
+`;
+const DisCounter = styled.div`
+  display: flex;
+  justify-content: space-between;
 `;
 const DinnerContainer = styled.div``;
 const Order = styled.div`
@@ -749,6 +852,10 @@ const Order = styled.div`
   color: #d37670;
   padding: 3px 11px;
   font-weight: 600;
+  @media all and (max-width: 980px) {
+    font-size: 8px;
+    padding: 3px 2px;
+  }
 `;
 const Dinner = styled.ul``;
 const DinnerList = styled.li`
@@ -779,14 +886,18 @@ const DropContainer = styled.div`
   padding-top: 10px;
 `;
 const Drop = styled.div`
-  font-size: 12px;
+  font-size: 16px;
   border-radius: 10px;
   border: 1px dashed #eac1a5;
-  padding: 10px 43px;
+  padding: 10px 50px;
   color: #d8772a;
   font-weight: 600;
   background-color: #ffecde;
   @media all and (max-width: 1080px) {
     padding: 10px 30px;
+  }
+  @media all and (max-width: 980px) {
+    padding: 10px 15px;
+    font-size: 11px;
   }
 `;
