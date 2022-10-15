@@ -387,6 +387,9 @@ const WidgetImage = styled.img`
 const ProfilePic = styled.div`
   border-radius: 50%;
   overflow: hidden;
+  @media all and (max-width: 360px) {
+    margin-top: 690px;
+  }
 `;
 const Picture = styled.img`
   width: 100%;
@@ -402,6 +405,10 @@ const Header = styled.div`
   align-items: center;
   height: 80px;
   margin-bottom: 10px;
+  @media all and (max-width: 360px) {
+    margin-bottom: 10px;
+    height: 50px;
+  }
 `;
 const HeadLeft = styled.div`
   width: 35%;
@@ -424,6 +431,10 @@ const Heading = styled.h2`
   @media all and (max-width: 480px) {
     font-size: 20px;
   }
+  @media all and (max-width: 360px) {
+    font-size: 18px;
+    margin-bottom: 3px;
+  }
 `;
 const SmallHeading = styled.h6`
   font-size: 12px;
@@ -440,6 +451,9 @@ const SmallHeading = styled.h6`
   }
   @media all and (max-width: 480px) {
     font-size: 10px;
+  }
+  @media all and (max-width: 360px) {
+    font-size: 9px;
   }
 `;
 const HeadRight = styled.div`
@@ -572,6 +586,12 @@ const SubHeading = styled.h3`
   @media all and (max-width: 768px) {
     font-size: 16px;
   }
+  @media all and (max-width: 360px) {
+    font-size: 14px;
+  }
+  @media all and (max-width: 360px) {
+    margin-bottom: 10px;
+  }
 `;
 const NavBar = styled.div`
   border-bottom: 1px solid #d4d4d4;
@@ -587,6 +607,9 @@ const Nav = styled.ul`
   }
   @media all and (max-width: 640px) {
     width: 100%;
+  }
+  @media all and (max-width: 360px) {
+    display: none;
   }
 `;
 const Menu = styled(Link)`
@@ -673,6 +696,9 @@ const PriceContainer = styled.div`
   @media all and (max-width: 980px) {
     width: 59%;
   }
+  @media all and (max-width: 360px) {
+    width: 52%;
+  }
 `;
 const Dollar = styled.span`
   color: var(--orange);
@@ -685,6 +711,12 @@ const DiscountPrice = styled.h4`
   @media all and (max-width: 1080px) {
     font-size: 17px;
   }
+  @media all and (max-width: 480px) {
+    font-size: 15px;
+  }
+  @media all and (max-width: 360px) {
+    font-size: 12px;
+  }
 `;
 const ActualPrice = styled.span`
   display: inline-block;
@@ -693,6 +725,9 @@ const ActualPrice = styled.span`
   font-size: 16px;
   @media all and (max-width: 980px) {
     font-size: 14px;
+  }
+  @media all and (max-width: 360px) {
+    font-size: 11px;
   }
 `;
 const OrderButton = styled.button`

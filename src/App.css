@@ -136,7 +136,13 @@ p {
 }
 @media all and (max-width: 480px){
   input{
-    padding: 6px 8gpx;
+    padding: 6px 8px;
+    font-size: 9px;
+  }
+}
+@media all and (max-width: 360px){
+  input{
+    padding: 6px 6px;
     font-size: 9px;
   }
 }
