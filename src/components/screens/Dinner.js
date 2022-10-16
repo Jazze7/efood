@@ -64,7 +64,7 @@ function Coffee() {
 
 export default Coffee;
 const Container = styled.div`
-  height: 100vh;
+  // height: 100vh;
   display: flex;
 `;
 
@@ -78,29 +78,84 @@ const Header = styled.div`
   align-items: center;
   height: 80px;
   margin-bottom: 10px;
+  @media all and (max-width: 360px) {
+    margin-bottom: 10px;
+    height: 50px;
+  }
 `;
 const HeadLeft = styled.div`
   width: 35%;
+  @media all and (max-width: 768px) {
+    width: 40%;
+    @media all and (max-width: 640px) {
+      width:100%;
+  }
 `;
 const Heading = styled.h2`
   font-size: 24px;
   font-weight: 700;
   margin-bottom: 10px;
+  @media all and (max-width: 980px) {
+    font-size: 16px;
+  }
+  @media all and (max-width: 640px) {
+    font-size: 25px;
+  }
+  @media all and (max-width: 480px) {
+    font-size: 20px;
+  }
+  @media all and (max-width: 360px) {
+    font-size: 18px;
+    margin-bottom: 3px;
+  }
 `;
 const SmallHeading = styled.h6`
   font-size: 12px;
   font-weight: 700;
   color: #757575;
+  @media all and (max-width: 980px) {
+    font-size: 8.5px;
+  }
+  @media all and (max-width: 768px) {
+    font-size: 9.5px;
+  }
+  @media all and (max-width: 640px) {
+    font-size: 11px;
+  }
+  @media all and (max-width: 480px) {
+    font-size: 10px;
+  }
+  @media all and (max-width: 360px) {
+    font-size: 9px;
+  }
 `;
 const HeadRight = styled.div`
   width: 70%;
   display: flex;
   justify-content: space-evenly;
+
+  @media all and (max-width: 768px) {
+    width: 58%;
+  }
+  @media all and (max-width: 640px) {
+    display :none;
 `;
 const Buttons = styled.div`
   width: 40%;
   display: flex;
   justify-content: space-between;
+
+  @media all and (max-width: 1280px) {
+    width: 50%;
+  }
+  @media all and (max-width: 1080px) {
+    width: 55%;
+  }
+  @media all and (max-width: 980px) {
+    width: 58%;
+  }
+  @media all and (max-width: 768px) {
+    width: 80%;
 `;
 const MenuButton = styled.button`
   height: 35px;
@@ -115,6 +170,15 @@ const MenuButton = styled.button`
     background-color: var(--orange);
     color: #fff;
   }
+  @media all and (max-width: 980px) {
+    height: 30px;
+    width: 50px;
+    font-size: 11px;
+    // @media all and (max-width: 768px) {
+    //   height: 25px;
+    //   width: 40px;
+    //   font-size: 9px;
+    // }
 `;
 const MealButton = styled.button`
   height: 35px;
@@ -129,6 +193,10 @@ const MealButton = styled.button`
     background-color: var(--orange);
     color: #fff;
   }
+  @media all and (max-width: 980px) {
+    height: 30px;
+    width: 75px;
+    font-size: 11px;
 `;
 const DeliveryButton = styled.button`
   height: 35px;
@@ -143,10 +211,18 @@ const DeliveryButton = styled.button`
     background-color: var(--orange);
     color: #fff;
   }
+  @media all and (max-width: 980px) {
+    height: 30px;
+    width: 55px;
+    font-size: 11px;
+  }
 `;
 const FormSearch = styled.form`
   display: flex;
   position: relative;
+  @media all and (max-width: 768px) {
+    display: none;
+  }
 `;
 const FormInput = styled.input`
   padding: 10px 15px;
@@ -158,12 +234,19 @@ const FormInput = styled.input`
   width: 155px;
   font-size: 12px;
   border: none;
+  @media all and (max-width: 980px) {
+    width: 120px;
+    padding: 9px 8px;
+    font-size: 11px;
+
 `;
 const FormImageContainer = styled.div`
   position: absolute;
   right: 16px;
   bottom: 10px;
   width: 10%;
+  @media all and (max-width: 980px) {
+    right:3px;
 `;
 const FormImage = styled.img`
   width: 100%;
@@ -173,6 +256,15 @@ const SubHeading = styled.h3`
   font-size: 20px;
   font-weight: 700;
   margin-bottom: 20px;
+  @media all and (max-width: 768px) {
+    font-size: 16px;
+  }
+  @media all and (max-width: 360px) {
+    font-size: 14px;
+  }
+  @media all and (max-width: 360px) {
+    margin-bottom: 10px;
+  }
 `;
 const NavBar = styled.div`
   border-bottom: 1px solid #d4d4d4;
@@ -183,6 +275,15 @@ const Nav = styled.ul`
   justify-content: space-between;
   width: 85%;
   margin-bottom: 5px;
+  @media all and (max-width: 768px) {
+    width: 95%;
+  }
+  @media all and (max-width: 640px) {
+    width: 100%;
+  }
+  @media all and (max-width: 360px) {
+    display: none;
+  }
 `;
 const Menu = styled(Link)`
   color: #747474;
@@ -205,6 +306,12 @@ const Menu = styled(Link)`
   &:hover::after {
     opacity: 1;
   }
+  @media all and (max-width: 640px) {
+    font-size: 10px;
+  }
+  @media all and (max-width: 480px) {
+    font-size: 8px;
+  }
 `;
 const Content = styled.div``;
 const ImageContainer = styled.div`
@@ -220,7 +327,7 @@ const Image = styled.img`
   overflow: hidden;
 `;
 const Caption = styled.h2`
-  font-size: 24px;
+  font-size: 1em;
   font-weight: 700;
   margin-top: 20px;
   text-align: center;

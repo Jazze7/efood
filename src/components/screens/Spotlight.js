@@ -324,7 +324,7 @@ const LeftContainer = styled.aside`
     width: 12%;
   }
   @media all and (max-width: 640px) {
-    width: 15%;
+    width: 13%;
   }
 `;
 const ContentContainer = styled.div`
@@ -334,7 +334,7 @@ const ContentContainer = styled.div`
     width: 50%;
   }
   @media all and (max-width: 640px) {
-    width: 75%;
+    width: 60%;
   }
 `;
 const LogoContainer = styled.div`
