@@ -7,11 +7,13 @@ import IceCream from "./components/screens/IceCream";
 import Lunch from "./components/screens/Lunch";
 import PageNotFound from "./components/screens/PageNotFound";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Preload from "./components/Preloader/Preload";
 
 function App() {
   return (
     <>
       <Router>
+        <Preload />
         <Routes>
           <Route path="/efood" element={<Spotlight />} />
           <Route path="/" element={<Spotlight />} />
