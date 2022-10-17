@@ -1,7 +1,7 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import styled from "styled-components";
 import LeftBar from "./LeftBar";
+import Nav from "./Nav";
 import Right from "./Right";
 
 function Coffee() {
@@ -36,17 +36,7 @@ function Coffee() {
           </Header>
 
           <SubHeading>Find the menu you want</SubHeading>
-
-          <NavBar>
-            <Nav>
-              <Menu to="/">Recommended</Menu>
-              <Menu to="/breakfast">Breakfast</Menu>
-              <Menu to="/lunch">Lunch</Menu>
-              <Menu to="/dinner">Dinner</Menu>
-              <Menu to="/icecream">Ice Cream</Menu>
-              <Menu to="/coffee">Coffee</Menu>
-            </Nav>
-          </NavBar>
+          <Nav />
 
           <Content>
             <ImageContainer>
@@ -263,53 +253,6 @@ const SubHeading = styled.h3`
   }
   @media all and (max-width: 360px) {
     margin-bottom: 10px;
-  }
-`;
-const NavBar = styled.div`
-  border-bottom: 1px solid #d4d4d4;
-  margin-bottom: 20px;
-`;
-const Nav = styled.ul`
-  display: flex;
-  justify-content: space-between;
-  width: 85%;
-  margin-bottom: 5px;
-  @media all and (max-width: 768px) {
-    width: 95%;
-  }
-  @media all and (max-width: 640px) {
-    width: 100%;
-  }
-  @media all and (max-width: 360px) {
-    display: none;
-  }
-`;
-const Menu = styled(Link)`
-  color: #747474;
-  font-size: 13px;
-  position: relative;
-  &::after {
-    content: "";
-    position: absolute;
-    border-bottom: 1px solid var(--orange);
-    height: 1px;
-    width: 100px;
-    bottom: -6px;
-    left: -5px;
-    opacity: 0;
-  }
-  &:hover {
-    font-weight: 700;
-    color: #000;
-  }
-  &:hover::after {
-    opacity: 1;
-  }
-  @media all and (max-width: 640px) {
-    font-size: 10px;
-  }
-  @media all and (max-width: 480px) {
-    font-size: 8px;
   }
 `;
 const Content = styled.div``;

@@ -23,7 +23,7 @@ function PageNotFound() {
 
                   <p>the page you are looking for not avaible!</p>
 
-                  <Rout to="/"> Go to Home</Rout>
+                  <Rout to="/efood"> Go to Home</Rout>
                 </div>
               </div>
             </div>

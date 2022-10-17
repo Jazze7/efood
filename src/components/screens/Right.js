@@ -42,46 +42,7 @@ export default function Right() {
             <Purchased>Purchased</Purchased>
           </CaptionContainer>
           <Time>06.30AM</Time>
-          {/* <BreakFast>
-            <BreakFastList>
-              <BreakFastLeft>
-                <BreakFastImgCont>
-                  <BreakFastImg
-                    src={require("../../Assets/images/six.jpg")}
-                  ></BreakFastImg>
-                </BreakFastImgCont>
-              </BreakFastLeft>
-              <BreakFastRight>
-                <Name>Nasi Goreng Park Parjo </Name>
-                <Pricing>
-                  <Discount>
-                    <DollarSign>$</DollarSign>8,10
-                  </Discount>
-                  <Actual>$10,10</Actual>
-                </Pricing>
-              </BreakFastRight>
-            </BreakFastList>
-          </BreakFast>
-          <BreakFast>
-            <BreakFastList>
-              <BreakFastLeft>
-                <BreakFastImgCont>
-                  <BreakFastImg
-                    src={require("../../Assets/images/six.jpg")}
-                  ></BreakFastImg>
-                </BreakFastImgCont>
-              </BreakFastLeft>
-              <BreakFastRight>
-                <Name>Nasi Goreng Park Parjo </Name>
-                <Pricing>
-                  <Discount>
-                    <DollarSign>$</DollarSign>8,10
-                  </Discount>
-                  <Actual>$10,10</Actual>
-                </Pricing>
-              </BreakFastRight>
-            </BreakFastList>
-          </BreakFast> */}
+  
         </BreakfastContainer>
 
         <LunchContainer>

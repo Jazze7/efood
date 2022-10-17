@@ -13,6 +13,7 @@ function App() {
     <>
       <Router>
         <Routes>
+          <Route path="/efood" element={<Spotlight />} />
           <Route path="/" element={<Spotlight />} />
           <Route path="/breakfast" element={<BreakFast />} />
           <Route path="/coffee" element={<Coffee />} />

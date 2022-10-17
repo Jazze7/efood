@@ -5,7 +5,7 @@ import products from "../json/Product.json";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import Nav from "./Nav";
 
 export default function Spotlight() {
   const [startDate, setStartDate] = useState(new Date());
@@ -149,6 +149,7 @@ export default function Spotlight() {
             <ProfilePic>
               <Picture src={require("../../Assets/images/pic.jpg")}></Picture>
             </ProfilePic>
+
           </ContentContainer>
         </LeftContainer>
         {/* Structuring of left container ends */}
@@ -181,21 +182,11 @@ export default function Spotlight() {
 
           <SubHeading>Find the menu you want</SubHeading>
 
-          <NavBar>
-            <Nav>
-              <Menu to="/">Recommended</Menu>
-              <Menu to="/breakfast">Breakfast</Menu>
-              <Menu to="/lunch">Lunch</Menu>
-              <Menu to="/dinner">Dinner</Menu>
-              <Menu to="/icecream">Ice Cream</Menu>
-              <Menu to="/coffee">Coffee</Menu>
-            </Nav>
-          </NavBar>
+          <Nav />
 
           <Content>{renderProduct()}</Content>
         </MiddleContainer>
         {/* Structuring of Middle container ends */}
-
         {/* Structuring of Right container starts */}
         <RightContainer>
           <DateContainer>
@@ -273,6 +264,7 @@ export default function Spotlight() {
                 </LunchRight>
               </LunchList>
             </Lunch>
+            
           </LunchContainer>
 
           <DinnerContainer>
@@ -593,53 +585,6 @@ const SubHeading = styled.h3`
     margin-bottom: 10px;
   }
 `;
-const NavBar = styled.div`
-  border-bottom: 1px solid #d4d4d4;
-  margin-bottom: 20px;
-`;
-const Nav = styled.ul`
-  display: flex;
-  justify-content: space-between;
-  width: 85%;
-  margin-bottom: 5px;
-  @media all and (max-width: 768px) {
-    width: 95%;
-  }
-  @media all and (max-width: 640px) {
-    width: 100%;
-  }
-  @media all and (max-width: 360px) {
-    display: none;
-  }
-`;
-const Menu = styled(Link)`
-  color: #747474;
-  font-size: 13px;
-  position: relative;
-  &::after {
-    content: "";
-    position: absolute;
-    border-bottom: 1px solid var(--orange);
-    height: 1px;
-    width: 100px;
-    bottom: -6px;
-    left: -5px;
-    opacity: 0;
-  }
-  &:hover {
-    font-weight: 700;
-    color: #000;
-  }
-  &:hover::after {
-    opacity: 1;
-  }
-  @media all and (max-width: 640px) {
-    font-size: 10px;
-  }
-  @media all and (max-width: 480px) {
-    font-size: 8px;
-  }
-`;
 const Content = styled.ul`
   display: flex;
   justify-content: space-between;
@@ -757,6 +702,12 @@ const RightContainer = styled.aside`
   @media all and (max-width: 640px) {
     width: 30%;
     padding: 0 8px;
+  }
+  @media all and (max-width: 480px) {
+    padding: 60px 8px;
+  }
+  @media all and (max-width: 360px) {
+    padding: 40px 8px;
   }
 `;
 const DateContainer = styled.div`
