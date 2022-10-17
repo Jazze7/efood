@@ -14,7 +14,7 @@ export default function Spotlight() {
   // add to cart
   const addToCart = (id) => {
     let new_food = products.find((products) => products.id === id);
-    setOrders([...orders, new_food]);
+    setOrders([new_food, ...orders]);
   };
 
   // render order function
@@ -149,7 +149,6 @@ export default function Spotlight() {
             <ProfilePic>
               <Picture src={require("../../Assets/images/pic.jpg")}></Picture>
             </ProfilePic>
-
           </ContentContainer>
         </LeftContainer>
         {/* Structuring of left container ends */}
@@ -264,7 +263,6 @@ export default function Spotlight() {
                 </LunchRight>
               </LunchList>
             </Lunch>
-            
           </LunchContainer>
 
           <DinnerContainer>
